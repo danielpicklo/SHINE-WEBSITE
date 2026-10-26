@@ -8,21 +8,21 @@ export function ComparisonTable() {
           Shine is the only solar EPC that installs on resident meters and common area meters in
           all 50 states.
         </h2>
-        <div className="mt-10 overflow-x-auto rounded-lg bg-white shadow-sm">
-          <table className="w-full min-w-[720px] border-collapse text-left text-base text-[#0e0e0e]">
+        <div className="mt-10 rounded-lg bg-white shadow-sm">
+          <table className="w-full table-fixed border-collapse text-left text-sm text-[#0e0e0e] sm:text-base">
             <thead>
-              <tr className="h-[60px]">
-                <th className="bg-[#474747] px-6 font-display text-2xl font-semibold tracking-[-0.6px] text-white">
+              <tr className="h-auto min-h-[60px]">
+                <th className="bg-[#474747] px-3 py-3 font-display text-base font-semibold leading-tight tracking-[-0.6px] text-white sm:px-6 sm:text-2xl">
                   What You Get
                 </th>
-                <th className="w-[220px] bg-accent px-6">
+                <th className="w-[28%] bg-accent px-3 py-3 sm:w-[220px] sm:px-6">
                   <img
                     src="/homepage/shine-wordmark.svg"
                     alt="Shine"
-                    className="h-5 w-auto"
+                    className="h-4 w-auto sm:h-5"
                   />
                 </th>
-                <th className="bg-[#474747] px-6 font-display text-2xl font-semibold tracking-[-0.6px] text-white">
+                <th className="bg-[#474747] px-3 py-3 font-display text-base font-semibold leading-tight tracking-[-0.6px] text-white sm:px-6 sm:text-2xl">
                   Other Solar Companies
                 </th>
               </tr>
@@ -30,9 +30,15 @@ export function ComparisonTable() {
             <tbody>
               {comparisonRows.map((row) => (
                 <tr key={row.feature} className="border-b border-[#eaecf0]">
-                  <td className="px-6 py-4 leading-[22.5px]">{row.feature}</td>
-                  <td className="border-x border-[#eaecf0] bg-[#fffcde] px-6 py-4">{row.shine}</td>
-                  <td className="px-6 py-4 leading-[22.5px]">{row.others}</td>
+                  <td className="break-words px-3 py-3 leading-snug sm:px-6 sm:py-4 sm:leading-[22.5px]">
+                    {row.feature}
+                  </td>
+                  <td className="break-words border-x border-[#eaecf0] bg-[#fffcde] px-3 py-3 leading-snug sm:px-6 sm:py-4">
+                    {row.shine}
+                  </td>
+                  <td className="break-words px-3 py-3 leading-snug sm:px-6 sm:py-4 sm:leading-[22.5px]">
+                    {row.others}
+                  </td>
                 </tr>
               ))}
             </tbody>

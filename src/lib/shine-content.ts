@@ -17,12 +17,16 @@ export const headerCta = {
 };
 
 export const customerLogos = [
-  { name: "Jonathan Rose Companies", src: "/homepage/logo-rose.png", width: 361 },
-  { name: "Lincoln Avenue Communities", src: "/homepage/logo-lincoln.png", width: 156 },
-  { name: "the NRP group", src: "/homepage/logo-nrp.png", width: 53 },
-  { name: "Equity Residential", src: "/homepage/logo-equity.png", width: 369 },
-  { name: "AvalonBay Communities", src: "/homepage/logo-avalonbay.png", width: 114 },
-  { name: "Gorman & Company", src: "/homepage/logo-gorman.png", width: 213 },
+  { name: "April Housing", src: "/homepage/logos/logo-april.png" },
+  { name: "AvalonBay Communities", src: "/homepage/logos/logo-avalonbay.png" },
+  { name: "Equity Residential", src: "/homepage/logos/logo-equity-residential.png" },
+  { name: "Gorman & Company", src: "/homepage/logos/logo-gorman.png" },
+  { name: "Hudson Valley Property Group", src: "/homepage/logos/logo-hudson-valley.png" },
+  { name: "Lincoln Avenue Communities", src: "/homepage/logos/logo-lincoln.png" },
+  { name: "The Michaels Organization", src: "/homepage/logos/logo-michaels.png" },
+  { name: "the NRP group", src: "/homepage/logos/logo-nrp.png" },
+  { name: "Related", src: "/homepage/logos/logo-related.png" },
+  { name: "Jonathan Rose Companies", src: "/homepage/logos/logo-rose.png" },
 ];
 
 export const housingColumns = [
@@ -204,23 +208,33 @@ export const faqs = [
   },
   {
     question: "What's the difference between common area solar and resident (tenant) solar?",
-    answer: "Answer coming soon.",
+    answer:
+      "Common area solar powers shared spaces like the leasing office, fitness center, and hallways — a small slice of a property's total electricity use. Resident (tenant) solar powers individual units, which make up roughly 95% of the load. Shine installs a small system per apartment unit, which is what allows you to capture 100% of the electrical load in your apartment community and turn it into NOI.",
   },
   {
     question: "How do multifamily properties increase NOI with solar?",
-    answer: "Answer coming soon.",
+    answer:
+      "Most solar systems only offset common area electricity — about 5% of a property's load — which reduces operating expenses. Shine focuses on installing solar on resident meters, the other 95%, which allows you to create an entirely new income line instead of just cutting a cost.",
+  },
+  {
+    question: "Didn’t the solar tax credit go away on July 4, 2026?",
+    answer:
+      "Yes. The OBBBA accelerated the phaseout of federal tax credits for new solar projects, making July 4, 2026 a critical construction deadline. However, standalone energy storage remains eligible for federal tax credits through at least 2032. As a result, solar projects now require a more comprehensive analysis that considers storage, financial optimization, FEOC compliance, and opportunities to qualify for domestic-content incentives.",
   },
   {
     question: "What if I need a new roof?",
-    answer: "Answer coming soon.",
+    answer:
+      "A roof replacement is often the best time to install solar. Coordinating both projects creates design, labor, permitting, and mobilization efficiencies while avoiding the future cost of removing and reinstalling solar panels. Shine can evaluate the roof and solar scopes together to identify synergies, reduce overall project costs, and minimize disruption.",
   },
   {
     question: "Does Shine offer financing?",
-    answer: "Answer coming soon.",
+    answer:
+      "Yes. Shine works with several financing partners that offer power purchase agreements (PPAs). A PPA allows you to install solar with no upfront capital investment and purchase the electricity the system generates at an agreed-upon rate. We evaluate your property and financial goals to help identify the best financing structure and partner for your project.",
   },
   {
     question: "What is a solar EPC, and does it matter which one I choose?",
-    answer: "Answer coming soon.",
+    answer:
+      "EPC stands for engineering, procurement, and construction — the company that designs, permits, and builds your solar system. Most EPCs stop there and hand you off to separate vendors for billing software and performance monitoring. Shine also offers and manages those pieces, so you're working with one team instead of several.",
   },
 ];
 
@@ -230,9 +244,6 @@ export const footerColumns: { title: string; links: SiteLink[] }[] = [
     links: [
       { label: "Affordable Housing Solar", href: "/affordable-housing" },
       { label: "Market-Rate Multifamily Solar", href: "/market-rate-housing" },
-      { label: "Tenant Solar" },
-      { label: "Solar Billing" },
-      { label: "Monitoring & Maintenance" },
     ],
   },
   {
@@ -240,8 +251,6 @@ export const footerColumns: { title: string; links: SiteLink[] }[] = [
     links: [
       { label: "About Shine", href: "/about" },
       { label: "Projects", href: "/projects" },
-      { label: "Insights" },
-      { label: "Careers" },
       { label: "Contact", href: "/contact" },
     ],
   },
@@ -251,9 +260,5 @@ export const footerColumns: { title: string; links: SiteLink[] }[] = [
       { label: "Solar Calculator", href: "/#calculator" },
       { label: "Free Solar NOI Analysis", href: "/contact" },
     ],
-  },
-  {
-    title: "Legal",
-    links: [{ label: "Privacy Policy" }, { label: "Terms of Use" }],
   },
 ];

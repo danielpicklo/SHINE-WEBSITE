@@ -16,7 +16,7 @@ export function MarketRateHero() {
           load into a recurring revenue stream — on top of savings from common area solar.
         </p>
         <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row">
-          <a href="/contact" className={button}>
+          <a href="/#calculator" className={button}>
             Calculate my Solar NOI
           </a>
           <a

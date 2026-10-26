@@ -1,4 +1,5 @@
 import { projects } from "@/lib/shine-content";
+import { ProjectCarousel } from "@/components/shine/ProjectCarousel";
 
 const names = ["Southlands", "Helix", "RiNo"];
 
@@ -8,63 +9,10 @@ export function MarketRateProjects() {
     .filter((project) => project != null);
 
   return (
-    <section className="relative overflow-hidden bg-white py-16 lg:py-24">
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 200 200"
-        className="pointer-events-none absolute -right-8 top-4 hidden h-48 w-48 text-accent lg:block"
-      >
-        {Array.from({ length: 12 }).map((_, index) => (
-          <rect
-            key={index}
-            x="92"
-            y="8"
-            width="16"
-            height="70"
-            rx="2"
-            fill="currentColor"
-            opacity={index % 2 === 0 ? 0.95 : 0.45}
-            transform={`rotate(${index * 30} 100 100)`}
-          />
-        ))}
-      </svg>
-      <div className="relative mx-auto max-w-[1280px] px-5 lg:px-8">
-        <h2 className="mx-auto max-w-3xl text-center text-[28px] leading-10 tracking-[-0.6px] text-[#171717] lg:text-[30px]">
-          Our projects increase NOI by $620/unit
-        </h2>
-        <div className="mt-12 flex gap-6 overflow-x-auto pb-4 lg:gap-10">
-          {cards.map((project) => (
-            <article
-              key={project.name}
-              className="relative flex w-[85vw] max-w-[640px] shrink-0 flex-col justify-end overflow-hidden rounded-lg p-6 text-white sm:p-8"
-            >
-              <img src={project.image} alt="" className="absolute inset-0 size-full object-cover" />
-              <div className="absolute inset-0 bg-black/60" />
-              <div className="relative flex min-h-[420px] flex-col justify-end gap-6">
-                {project.owner ? (
-                  <span className="w-fit rounded-full bg-accent px-3 py-1 font-display text-xs uppercase tracking-[0.6px] text-[#0e0e0e]">
-                    {project.owner}
-                  </span>
-                ) : null}
-                <div>
-                  <h3 className="text-4xl leading-tight tracking-[-1.2px] lg:text-5xl lg:leading-[1.1]">
-                    {project.name}
-                  </h3>
-                  <p className="mt-2 font-display text-lg tracking-[-0.6px]">{project.location}</p>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  {project.metrics.map((metric) => (
-                    <div key={metric.label} className="bg-white p-4 text-[#0a0a0a]">
-                      <p className="font-display text-2xl tracking-[-0.6px]">{metric.value}</p>
-                      <p className="mt-1 text-sm leading-[18px] text-[#525252]">{metric.label}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
+    <ProjectCarousel
+      projects={cards}
+      heading="Our projects increase NOI by $620/unit"
+      headingClassName="mx-auto max-w-3xl text-center text-[28px] leading-10 tracking-[-0.6px] text-[#171717] lg:text-[30px]"
+    />
   );
 }

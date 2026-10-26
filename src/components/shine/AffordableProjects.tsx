@@ -9,25 +9,12 @@ export function AffordableProjects() {
 
   return (
     <section className="relative overflow-hidden bg-white py-16 lg:py-24">
-      <svg
+      <img
+        src="/homepage/casestudies-bg.png"
+        alt=""
         aria-hidden="true"
-        viewBox="0 0 200 200"
-        className="pointer-events-none absolute -right-8 top-4 hidden h-48 w-48 text-accent lg:block"
-      >
-        {Array.from({ length: 12 }).map((_, index) => (
-          <rect
-            key={index}
-            x="92"
-            y="8"
-            width="16"
-            height="70"
-            rx="2"
-            fill="currentColor"
-            opacity={index % 2 === 0 ? 0.95 : 0.45}
-            transform={`rotate(${index * 30} 100 100)`}
-          />
-        ))}
-      </svg>
+        className="pointer-events-none absolute inset-0 size-full object-cover object-right"
+      />
       <div className="relative mx-auto max-w-[1280px] px-5 lg:px-8">
         <h2 className="mx-auto max-w-3xl text-center text-[28px] leading-10 tracking-[-0.6px] text-[#171717] lg:text-[30px]">
           See How Solar Increases Property Value for Affordable Housing Communities

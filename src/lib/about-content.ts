@@ -2,7 +2,7 @@ export type TeamMember = {
   name: string;
   role: string;
   image: string;
-  linkedIn?: boolean;
+  linkedIn?: string;
   focus?: "center" | "bottom";
 };
 
@@ -11,26 +11,24 @@ export const team: TeamMember[] = [
     name: "Owen Barrett",
     role: "Co-Founder and CEO",
     image: "/about/owen.jpg",
-    linkedIn: true,
+    linkedIn: "https://www.linkedin.com/in/owenmadsenbarrett/",
   },
   {
     name: "Earl Mohler",
     role: "Co-Founder and CTO",
     image: "/about/earl.jpg",
-    linkedIn: true,
+    linkedIn: "https://www.linkedin.com/in/earl-mohler/",
   },
   {
     name: "Justin Piotroski",
     role: "Chief Operating Officer",
-    image: "/about/justin.jpg",
-    linkedIn: true,
-    focus: "bottom",
+    image: "/about/justin.png",
+    linkedIn: "https://www.linkedin.com/in/justinpiotroski/",
   },
   {
     name: "David Perloe",
     role: "Director, Affordable Housing",
-    image: "/about/david.jpg",
-    focus: "bottom",
+    image: "/about/david.png",
   },
   {
     name: "Angie Marks",
@@ -71,14 +69,12 @@ export const team: TeamMember[] = [
   {
     name: "Aran Lucas",
     role: "Finance Operations Analyst",
-    image: "/about/aran.jpg",
-    focus: "bottom",
+    image: "/about/aran.png",
   },
   {
     name: "Heather Lee Thorsby",
     role: "Project Coordinator",
-    image: "/about/heather.jpg",
-    focus: "bottom",
+    image: "/about/heather.png",
   },
   {
     name: "Keegan Acker",

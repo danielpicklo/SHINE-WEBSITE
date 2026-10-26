@@ -22,7 +22,7 @@ export function AffordableHero() {
           for dollar — while your residents&apos; total housing costs stay the same.
         </p>
         <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row">
-          <a href="/contact" className={button}>
+          <a href="/#calculator" className={button}>
             Calculate my Solar NOI
           </a>
           <a

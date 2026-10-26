@@ -1,10 +1,14 @@
 export function Hero() {
   return (
     <section className="relative isolate flex min-h-[520px] items-center justify-center overflow-hidden bg-[#0e0e0e] text-white">
-      <img
-        src="/homepage/hero.jpg"
-        alt=""
+      <video
         className="absolute inset-0 size-full object-cover"
+        src="/homepage/hero.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-hidden="true"
       />
       <div className="absolute inset-0 bg-black/80" />
       <div className="relative z-10 mx-auto flex max-w-[1024px] flex-col items-center px-5 py-24 text-center lg:py-36">

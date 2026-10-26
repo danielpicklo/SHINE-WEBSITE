@@ -16,7 +16,15 @@ function Member({ person }: { person: (typeof team)[number] }) {
         {person.role}
       </p>
       {person.linkedIn ? (
-        <Linkedin className="mt-6 h-6 w-6 text-[#0e0e0e]" aria-hidden="true" />
+        <a
+          href={person.linkedIn}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex text-[#0e0e0e] transition-opacity hover:opacity-70"
+          aria-label={`${person.name} on LinkedIn`}
+        >
+          <Linkedin className="h-6 w-6" aria-hidden="true" />
+        </a>
       ) : null}
     </article>
   );

@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { processSteps } from "@/lib/shine-content";
+import { ProcessStepsCarousel } from "@/components/shine/ProcessStepsCarousel";
 
 export function Steps() {
-  const [progress, setProgress] = useState(0);
-
   return (
     <section id="steps" className="scroll-mt-20 overflow-hidden bg-[#0e0e0e] py-16 text-white lg:py-24">
       <div className="mx-auto grid max-w-[1440px] items-start gap-10 px-5 lg:grid-cols-[400px_1fr] lg:gap-16 lg:px-20">
@@ -28,43 +26,7 @@ export function Steps() {
           </a>
         </div>
 
-        <div className="min-w-0">
-          <h3 className="text-2xl tracking-[-0.6px]">What We Cover :</h3>
-          <div
-            className="mt-4 flex gap-6 overflow-x-auto pb-3"
-            onScroll={(event) => {
-              const el = event.currentTarget;
-              const max = el.scrollWidth - el.clientWidth;
-              setProgress(max > 0 ? el.scrollLeft / max : 0);
-            }}
-          >
-            {processSteps.map((step) => (
-              <article
-                key={step.n}
-                className="relative flex h-[408px] w-[300px] shrink-0 flex-col justify-end overflow-hidden rounded-lg p-6 sm:w-[360px]"
-              >
-                <img
-                  src={step.image}
-                  alt=""
-                  className="absolute inset-0 size-full object-cover opacity-20"
-                />
-                <div className="absolute inset-0 bg-[#0e0e0e]/40" />
-                <div className="relative">
-                  <h4 className="text-[30px] leading-10 tracking-[-0.6px] text-accent">
-                    {step.n}. {step.title}
-                  </h4>
-                  <p className="mt-5 text-base leading-[22.5px]">{step.body}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-          <div className="relative mt-2 h-1 w-full max-w-[280px] bg-white/20">
-            <div
-              className="absolute top-0 h-1 w-24 bg-white"
-              style={{ left: `calc((100% - 6rem) * ${progress})` }}
-            />
-          </div>
-        </div>
+        <ProcessStepsCarousel steps={processSteps} />
       </div>
     </section>
   );

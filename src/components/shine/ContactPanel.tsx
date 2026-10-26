@@ -18,7 +18,7 @@ export function ContactPanel() {
         <img
           src="/contact/hero.jpg"
           alt="Shine team members on a multifamily rooftop overlooking the city"
-          className="size-full min-h-[280px] object-cover object-[20%_center] lg:min-h-full"
+          className="size-full min-h-[280px] object-cover object-center lg:min-h-full"
         />
       </div>
 
